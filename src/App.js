@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import React from "react";
+import ComA from "./Component/ComA";
+import { Route, Routes } from "react-router-dom";
+import CovidTable from "./Component/CovidTable";
+import Header from "./Header";
+import Error from "./Component/Error";
+import Menu from "./Component/Navbar";
+import Calculator from "./Component/Calculator";
+import City from "./Component/City";
+import Regform from "./Component/Regform";
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Menu />
+      <Routes>
+        <Route path="/" element={<CovidTable />} />
+        <Route path="/covidTable" element={<CovidTable />} />
+        <Route path="/comA" element={<ComA />} />
+        <Route path="/header" element={<Header />} />
+        <Route path="/calculator" element={<Calculator />} />
+        <Route path="/city" element={<City />} />
+        <Route path="/contact" element={<Regform />} />
+        <Route path="*" element={<Error />} />
+      </Routes>
+    </>
   );
-}
-
+};
 export default App;

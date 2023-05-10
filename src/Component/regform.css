@@ -1,0 +1,143 @@
+.booking-form {
+  width: 100%;
+  max-width: 800px;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  background-color: rgb(248, 248, 248);
+  border-radius: 10px;
+  border: 10px solid burlywood;
+  padding: 5px;
+}
+.reg {
+  text-transform: uppercase;
+  text-align: center;
+  color: rgb(0, 0, 0);
+}
+.reg span {
+  color: brown;
+}
+.booking-form label {
+  display: block;
+}
+
+.booking-form input,
+.booking-form textarea {
+  display: block;
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #0c0c0c;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 15px;
+  font-family: inherit;
+}
+
+.booking-form input[type="submit"],
+.booking-form input[type="reset"] {
+  color: white;
+  padding: 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  margin: 5px;
+}
+.booking-form input[type="submit"] {
+  background-color: #4caf50;
+  color: black;
+}
+.booking-form input[type="submit"]:hover {
+  background-color: green;
+  color: white;
+  transform: scale(1.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.booking-form input[type="reset"] {
+  background-color: brown;
+}
+
+.booking-form input[type="reset"]:hover {
+  background-color: white;
+  color: black;
+  transform: scale(1.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.booking-form .name-inputs {
+  display: flex;
+  justify-content: space-between;
+}
+
+.booking-form .name-inputs label {
+  width: 48%;
+}
+
+.booking-form .gender-age-inputs {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.booking-form .gender-age-inputs label {
+  width: 48%;
+}
+
+.booking-form .age-input-group {
+  display: flex;
+  align-items: center;
+}
+
+.booking-form .qual-prof-inputs {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.booking-form .qual-prof-inputs label {
+  width: 48%;
+}
+
+.booking-form .location-contact-inputs {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.booking-form .location-contact-inputs label {
+  width: 48%;
+}
+
+.booking-form .message-input textarea {
+  height: 100px;
+}
+.message-input {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.message {
+  width: 70%;
+  margin-right: 10px;
+}
+
+.buttons {
+  width: 30%;
+  margin-top: 20px;
+}
+
+.booking-form h2 {
+  margin-top: 20px;
+  font-size: 24px;
+  font-weight: 500;
+  color: #4caf50;
+}
+
+.terms a {
+  text-decoration: none;
+  color: brown;
+}
+.terms {
+  text-align: center;
+  padding: 10px;
+}
