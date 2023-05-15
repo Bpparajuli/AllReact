@@ -8,6 +8,8 @@ import Menu from "./Component/Navbar";
 import Calculator from "./Component/Calculator";
 import City from "./Component/City";
 import Regform from "./Component/Regform";
+import HeadComp from "./Component/HeadComp";
+import Tempapp from "./Component/Tempapp";
 const App = () => {
   return (
     <>
@@ -20,6 +22,9 @@ const App = () => {
         <Route path="/calculator" element={<Calculator />} />
         <Route path="/city" element={<City />} />
         <Route path="/contact" element={<Regform />} />
+        <Route path="/Headcomp" element={<HeadComp />} />
+        <Route path="/tempapp" element={<Tempapp />} />
+
         <Route path="*" element={<Error />} />
       </Routes>
     </>

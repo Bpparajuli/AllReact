@@ -31,6 +31,12 @@ const Menu = () => {
                 <Link to="/contact">Contact</Link>
               </Nav.Link>
               <Nav.Link>
+                <Link to="/headcomp">HeadComp</Link>
+              </Nav.Link>
+              <Nav.Link>
+                <Link to="/tempapp">Tempapp</Link>
+              </Nav.Link>
+              <Nav.Link>
                 <SearchBar />
               </Nav.Link>
             </Nav>
