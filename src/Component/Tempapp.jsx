@@ -1,47 +1,55 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 const Tempapp = () => {
-  const [City, setCity] = useState(null); // Initialize City state with null
+  const [city, setCity] = useState(null);
   const [inputValue, setInputValue] = useState("Kathmandu");
+  const [submittedCity, setSubmittedCity] = useState("");
 
-  useEffect(() => {
-    const fetchApi = async () => {
-      const apiKey = "d173a01f9d1825e69d87248b2610b77d";
-      const url = `https://api.openweathermap.org/data/2.5/weather?q=${inputValue}&appid=${apiKey}`;
-      const response = await fetch(url);
-      const resJson = await response.json();
-      setCity(resJson.main);
-    };
+  const handleFormSubmit = async (event) => {
+    event.preventDefault();
 
-    fetchApi();
-  }, [inputValue]);
+    const apiKey = "f8381a854f78b0b30eb99984da2b39c4";
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${inputValue}&appid=${apiKey}&units=metric`;
+    const response = await fetch(url);
+    const resJson = await response.json();
+    setCity(resJson.main);
+    setSubmittedCity(inputValue);
+    setInputValue("");
+  };
 
   return (
     <>
       <div className="container-fluid d-flex flex-column justify-content-center align-items-center vh-100">
         <div className="text-center p-5 bg-black">
-          <input
-            type="search"
-            className="input"
-            value={inputValue}
-            onChange={(event) => {
-              setInputValue(event.target.value);
-            }}
-          />
-          {!City ? (
-            <p>No data Found</p>
-          ) : (
+          <h3 className="text-bg-warning p-2">Current Tempreture </h3>
+
+          <form onSubmit={handleFormSubmit}>
+            <input
+              type="search"
+              className="p-1"
+              value={inputValue}
+              onChange={(event) => setInputValue(event.target.value)}
+            />
+            <button type="submit" className="btn btn-success rounded">
+              Submit
+            </button>
+          </form>
+          {city && (
             <div className="information">
               <h2 className="city text-light">
                 <i className="fa-solid fa-street-view"></i>
-                {inputValue}
+                {submittedCity}
               </h2>
-              <h2 className="detailtemp text-info">{City.temp}°Celsius</h2>
-              <h3>Temp Detail</h3>
-              <p>
-                Min: {City.temp_min}°Celsius - Max: {City.temp_max}°Celsius
+              <h2 className="detailtemp text-info">{city.temp}°Celsius</h2>
+              <p className="text-success">
+                Min: {city.temp_min}°Celsius - Max: {city.temp_max}°Celsius
               </p>
             </div>
+          )}
+          {!city && (
+            <p className="text-danger p-3">
+              City Name not Entered or Spelling mistake
+            </p>
           )}
         </div>
       </div>
