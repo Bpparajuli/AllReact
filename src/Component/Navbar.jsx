@@ -16,16 +16,16 @@ const Menu = () => {
                 <Link to="/">Home</Link>
               </Nav.Link>
               <Nav.Link>
-                <Link to="/ComA">Component</Link>
+                <Link to="/comA">Component</Link>
               </Nav.Link>
               <Nav.Link>
-                <Link to="/Calculator">Calculator</Link>
+                <Link to="/calculator">Calculator</Link>
               </Nav.Link>
               <Nav.Link>
-                <Link to="/Error">Error</Link>
+                <Link to="/error">Error</Link>
               </Nav.Link>
               <Nav.Link>
-                <Link to="/City">City</Link>
+                <Link to="/city">City</Link>
               </Nav.Link>
               <Nav.Link>
                 <Link to="/contact">Contact</Link>
@@ -35,6 +35,12 @@ const Menu = () => {
               </Nav.Link>
               <Nav.Link>
                 <Link to="/tempapp">Tempapp</Link>
+              </Nav.Link>
+              <Nav.Link>
+                <Link to="/todo">Todo</Link>
+              </Nav.Link>
+              <Nav.Link>
+                <Link to="/quote">Quote</Link>
               </Nav.Link>
               <Nav.Link>
                 <SearchBar />
