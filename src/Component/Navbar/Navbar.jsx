@@ -1,21 +1,21 @@
 import React from "react";
 import { Navbar, Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import SearchBar from "./SearchBar";
+import SearchBar from "../SearchBar.jsx";
 import "./navbar.css";
 import { Route, Routes } from "react-router-dom";
-import Pikachu from "./Pikachu";
+import Pikachu from "../pikachu/Pikachu.jsx";
 import Homepage from "./Homepage";
-import CovidTable from "./CovidTable";
+import CovidTable from "../Covid/CovidTable.jsx";
 import Error from "./Error";
-import Calculator from "./Calculator";
-import City from "./City";
-import Regform from "./Regform";
-import Tempapp from "./Tempapp";
-import Todo from "./Todo";
-import Quote from "./Quote";
+import Calculator from "../Calculator/Calculator.jsx";
+import City from "../City/City.jsx";
+import Regform from "../Regform/Regform.jsx";
+import Tempapp from "../Temp/Tempapp.jsx";
+import Todo from "../Todo/Todo.jsx";
+import Quote from "../quote/Quote.jsx";
 import Linegraph from "./Linegraph";
-import Drum from "./Drum.jsx";
+import Drum from "../drum/Drum.jsx";
 const Menu = () => {
   return (
     <>
