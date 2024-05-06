@@ -1,4 +1,4 @@
-export const FakeData = {
+export const LinegraphData = {
   labels: [
     "Sunday",
     "Monday",

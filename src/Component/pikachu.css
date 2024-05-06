@@ -1,0 +1,17 @@
+.head-select {
+  color: brown;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.focus {
+  color: chocolate;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.focus-box {
+  border: 2px solid green;
+  color: black;
+  font-weight: 600;
+}

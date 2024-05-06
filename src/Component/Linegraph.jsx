@@ -1,6 +1,6 @@
 import React from "react";
 import { Line } from "react-chartjs-2";
-import { FakeData } from "./FakeData.jsx";
+import { LinegraphData } from "./LinegraphData.jsx";
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -25,7 +25,7 @@ const Linegraph = () => {
   const options = {};
   return (
     <>
-      <Line options={options} data={FakeData} />;
+      <Line options={options} data={LinegraphData} />;
     </>
   );
 };
