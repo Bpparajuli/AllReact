@@ -12,7 +12,9 @@ import HeadComp from "./Component/HeadComp";
 import Tempapp from "./Component/Tempapp";
 import Todo from "./Component/Todo";
 import Quote from "./Component/Quote";
-const App = () => {
+import Linegraph from "./Component/Linegraph";
+import Drum from "./Component/Drum";
+function App() {
   return (
     <>
       <Menu />
@@ -25,12 +27,14 @@ const App = () => {
         <Route path="/contact" element={<Regform />} />
         <Route path="/Headcomp" element={<HeadComp />} />
         <Route path="/tempapp" element={<Tempapp />} />
+        <Route path="/linegraph" element={<Linegraph />} />
         <Route path="/todo" element={<Todo />} />
         <Route path="/quote" element={<Quote />} />
         <Route path="*" element={<Error />} />
         <Route path="AllReact" element={<CovidTable />} />
+        <Route path="/drum" element={<Drum />} />
       </Routes>
     </>
   );
-};
+}
 export default App;

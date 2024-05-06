@@ -19,6 +19,12 @@ const Menu = () => {
                 <Link to="/comA">Component</Link>
               </Nav.Link>
               <Nav.Link>
+                <Link to="/drum">Drum</Link>
+              </Nav.Link>
+              <Nav.Link>
+                <Link to="/linegraph">Linegraph</Link>
+              </Nav.Link>
+              <Nav.Link>
                 <Link to="/calculator">Calculator</Link>
               </Nav.Link>
               <Nav.Link>

@@ -1,0 +1,104 @@
+body {
+  background-color: #f5f5f5;
+  font-family: "Russo One", sans-serif;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+#root {
+  width: 80%;
+  height: 80%;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+#drum-machine {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  width: 100%;
+}
+
+.drum-pad {
+  background-color: #333;
+  color: #fff;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.2s ease;
+}
+
+.drum-pad:hover {
+  background-color: #444;
+}
+
+.clip {
+  display: none;
+}
+
+.power-control {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: #333;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.power-control.inner {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: #fff;
+  transition: background-color 0.2s ease;
+}
+
+.power-control:hover.inner {
+  background-color: #ddd;
+}
+
+.signal-light {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: #f00;
+  margin-left: 10px;
+  transition: background-color 0.2s ease;
+}
+
+.power-control.on.signal-light {
+  background-color: #0f0;
+}
+
+.volume-control {
+  width: 80%;
+}
+
+#display {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.author {
+  font-size: 18px;
+  color: #333;
+  margin-top: 20px;
+}
